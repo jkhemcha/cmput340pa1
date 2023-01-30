@@ -6,6 +6,7 @@ if ~exist('k')
     k=m;
 end
 
+% Calculate value for the kth component of x
 x=y(k)/U(k,k);
 if k > 1 % Recursion step
     l = [U(1:k-1, k); zeros(m - (k-1),1)];
