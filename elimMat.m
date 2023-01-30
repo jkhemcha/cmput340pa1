@@ -8,10 +8,8 @@ function [M_k, L_k] = elimMat(A, k)
         M_k = eye(m, n);
         L_k = eye(m, n);
         % Compute M_k and L_k
-        for i = k+1:n
-            M_k(i, k) = (A(i,k) / A(k, k)) * -1;
-            L_k(i, k) = A(i,k) / A(k, k);
-        end
+        M_k(k+1:n, k) = A(k+1:n, k) / A(k, k) * -1;
+        L_k(k+1:n, k) = A(k+1:n, k) / A(k, k);
     end
 end
 
