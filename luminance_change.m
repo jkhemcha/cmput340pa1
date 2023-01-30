@@ -11,4 +11,3 @@ function [newI] = luminance_change(I, option, value)
     end
 
 end
-
